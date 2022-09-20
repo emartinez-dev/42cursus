@@ -1,5 +1,5 @@
-//#include "libft.h"
-#include <stddef.h>
+#include "libft.h"
+//#include <stddef.h>
 
 void	*ft_memset(void *s, int c, size_t n)
 {
@@ -13,3 +13,36 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
+
+/*
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+
+int	main(void)
+{
+	int     a;
+    int     b;
+    void     *i;
+    void     *j;
+    int     c;
+    size_t  n;
+    a = 0;
+    i = &a;
+    b = 0;
+    j = &b;
+    
+
+    c = 69;
+    n = 5;
+	ft_memset(i, c, n);
+    memset(j, c, n);
+    
+	printf("La mia: %p\nLa buena: %p\n", i, j);
+	if (i != j)
+		printf("OK!!");
+	else
+		printf("ERROR!!!");
+	return (0);
+}
+*/
