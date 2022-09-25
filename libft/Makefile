@@ -12,6 +12,7 @@ SRC = ft_bzero.c\
 	   ft_isdigit.c\
 	   ft_isprint.c\
 	   ft_memmove.c\
+	   ft_memcpy.c\
 	   ft_memset.c\
 	   ft_strchr.c\
 	   ft_strlen.c\
@@ -40,4 +41,8 @@ fclean:
 re:
 	fclean all
 
-.PHONY:	all clean fclean re
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
+	gcc -nostartfiles -shared -o libft.so $(OBJ)
+
+.PHONY:	all clean fclean re so
