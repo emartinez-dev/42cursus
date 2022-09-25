@@ -1,42 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/25 16:23:42 by franmart          #+#    #+#             */
-/*   Updated: 2022/09/25 16:23:46 by franmart         ###   ########.fr       */
+/*   Created: 2022/09/25 16:24:07 by franmart          #+#    #+#             */
+/*   Updated: 2022/09/25 16:24:10 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <stddef.h>
 
-int	ft_isdigit(int c)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	if (c < 48 || c > 57)
-		return (0);
-	return (1);
+	size_t	i;
+	
+	i = 0;
+	while (i < n)
+	{
+        // ?????????????????????????????
+        (int *)(dest + i) = *(src + i);
+		i++;
+        // ?????????????????????????????
+	}
+    return (dest);
 }
-
-/*
-#include <ctype.h>
-#include <stdio.h>
-
-int	main(void)
-{
-	int	i;
-	int j;
-	int	testing;
-
-	testing = '1';
-	i = ft_isdigit(testing);
-	j = isdigit(testing);
-	printf("La mia: %d\nLa buena: %d\n", i, j);
-	if (i == j)
-		printf("OK!!");
-	else
-		printf("ERROR!!!");
-	return (0);
-}
-*/
