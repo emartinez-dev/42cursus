@@ -6,13 +6,13 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 16:24:32 by franmart          #+#    #+#             */
-/*   Updated: 2022/09/25 16:24:36 by franmart         ###   ########.fr       */
+/*   Updated: 2022/09/25 16:34:20 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *memmove(void *dest, const void *src, size_t n)
+void	*memmove(void *dest, const void *src, size_t n)
 {
-        
+
 }

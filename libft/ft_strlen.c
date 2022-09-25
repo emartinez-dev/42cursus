@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 16:25:04 by franmart          #+#    #+#             */
-/*   Updated: 2022/09/25 16:25:07 by franmart         ###   ########.fr       */
+/*   Updated: 2022/09/25 16:31:32 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
+/*  
 #include <string.h>
 #include <stdio.h>
-
-/* int	main(void)
+int	main(void)
 {
 	int		i;
 	int		j;
