@@ -1,21 +1,34 @@
-LIB = ar rcs
+LIB = ar -rcs
 RM = rm -rf
 
 CC = gcc
 FLAGS = -Wall -Wextra -Werror
 
 NAME = libft.a
-SRC = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c\
-ft_memset.c ft_strlen.c ft_tolower.c ft_toupper.c main.c
-OBJ = $(SRC:.c=.o)
+SRC = ft_bzero.c\
+	   ft_isalnum.c\
+	   ft_isalpha.c\
+	   ft_isascii.c\
+	   ft_isdigit.c\
+	   ft_isprint.c\
+	   ft_memmove.c\
+	   ft_memset.c\
+	   ft_strchr.c\
+	   ft_strlen.c\
+	   ft_strrchr.c\
+	   ft_tolower.c\
+	   ft_toupper.c
+
+OBJ = ${SRC:.c=.o}
+
 INCLUDE = libft.h
 
-all: $(NAME)
+all: ${NAME}
 
 ${NAME}:	${OBJ}
-			${CC} ${FLAGS} -o ${NAME} ${OBJ}
+	${LIB} -o $@ $^
 
-.c.o:
+.c.o: ${INCLUDE}
 	${CC} ${FLAGS} -c $< -o ${<:.c=.o}
 
 clean:
