@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 22:57:01 by franmart          #+#    #+#             */
-/*   Updated: 2022/09/26 23:32:49 by franmart         ###   ########.fr       */
+/*   Updated: 2022/09/26 23:52:07 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			j = 0;
 		i++;
 		if (little[j] == '\0')
-		   return ((char *)&big[i - j]);
+			return ((char *)&big[i - j]);
 	}
 	return (0);
 }

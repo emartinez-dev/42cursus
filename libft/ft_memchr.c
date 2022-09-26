@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 22:07:14 by franmart          #+#    #+#             */
-/*   Updated: 2022/09/26 22:15:16 by franmart         ###   ########.fr       */
+/*   Updated: 2022/09/26 23:52:38 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*str;
 	size_t			i;
-	
+
 	str = (unsigned char *)s;
 	i = 0;
 	while (i < n)

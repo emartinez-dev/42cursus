@@ -7,6 +7,7 @@ FLAGS = -Wall -Wextra -Werror
 NAME = libft.a
 SRC = ft_bzero.c\
 	   ft_isalnum.c\
+	   ft_atoi.c\
 	   ft_isalpha.c\
 	   ft_isascii.c\
 	   ft_isdigit.c\
