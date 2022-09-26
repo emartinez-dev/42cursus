@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 16:24:32 by franmart          #+#    #+#             */
-/*   Updated: 2022/09/25 17:43:31 by franmart         ###   ########.fr       */
+/*   Updated: 2022/09/26 17:18:59 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,12 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char	*temp;
-	size_t	i;
-
-	i = 0;
-	temp = "";
-	while (i < n)
-	{
-		*(temp + i) = *(char *)(src + i);
-		i++;
-	}
-	i = 0;
-	while (i < n)
-	{
-		*(char *)(dest + i) = *(temp + i);
-		i++;
-	}
+	if (!dest && !src)
+		return (0);
+	if ((char *)dest > (char *)src)
+		while (n-- > 0)
+			*(char *)(dest + n) = *(char *)(src + n);
+	else
+		ft_memcpy(dest, src, n);
 	return (dest);
 }

@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 16:24:07 by franmart          #+#    #+#             */
-/*   Updated: 2022/09/25 21:33:01 by franmart         ###   ########.fr       */
+/*   Updated: 2022/09/26 15:40:54 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	_dest = dest;
 	i = 0;
+	if (!dest && !src)
+		return (dest);
 	while (i < n)
 	{
 		*((char *)dest + i) = *((char *)src + i);
