@@ -18,6 +18,7 @@ SRC = ft_bzero.c\
 	   ft_memset.c\
 	   ft_strchr.c\
 	   ft_strncmp.c\
+	   ft_strnstr.c\
 	   ft_strlcat.c\
 	   ft_strlcpy.c\
 	   ft_strlen.c\
