@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 16:15:12 by franmart          #+#    #+#             */
-/*   Updated: 2022/09/27 21:46:41 by franmart         ###   ########.fr       */
+/*   Updated: 2022/09/27 21:49:47 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strchr(const char *s, int c)
 {
 	int		i;
 	char	ch;
-	
+
 	ch = (unsigned char)c;
 	i = 0;
 	while (s[i] != '\0')
