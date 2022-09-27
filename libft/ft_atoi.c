@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 23:35:48 by franmart          #+#    #+#             */
-/*   Updated: 2022/09/27 17:40:44 by franmart         ###   ########.fr       */
+/*   Updated: 2022/09/27 17:42:31 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	result = 0;
 	sign = 1;
-	while ((nptr[i] > 7 && nptr[i] < 14) || nptr[i] == 32)
+	while ((nptr[i] > 8 && nptr[i] < 14) || nptr[i] == 32)
 		i++;
 	if (nptr[i] == '-' || nptr[i] == '+')
 	{
