@@ -6,22 +6,26 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 16:15:12 by franmart          #+#    #+#             */
-/*   Updated: 2022/09/25 21:31:12 by franmart         ###   ########.fr       */
+/*   Updated: 2022/09/27 21:46:41 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
-
+	int		i;
+	char	ch;
+	
+	ch = (unsigned char)c;
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i] == ch)
 			return ((char *)(s + i));
 		i++;
 	}
-	if (s[i] == c)
+	if (s[i] == ch)
 		return ((char *)(s + i));
 	return (0);
 }
@@ -35,9 +39,9 @@ int	main(void)
     char	*s;
     char    *m;
     char    *o;
-	char	i = '\0';
+	int	i = 256;
 
-    s = "esta string tiene \0 muchos \0ceros \0";
+    s = "teste";
 	m = ft_strchr(s, i);
 	o = strchr(s, i);
     printf("La mia: %s\nLa buena: %s\n", m, o);
