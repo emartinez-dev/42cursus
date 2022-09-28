@@ -6,12 +6,11 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 21:07:37 by franmart          #+#    #+#             */
-/*   Updated: 2022/09/27 21:15:51 by franmart         ###   ########.fr       */
+/*   Updated: 2022/09/28 16:03:35 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strdup(const char *s)
 {
