@@ -18,6 +18,7 @@ SRC = ft_bzero.c\
 	   ft_memchr.c\
 	   ft_memcmp.c\
 	   ft_memset.c\
+	   ft_split.c\
 	   ft_strchr.c\
 	   ft_strdup.c\
 	   ft_strjoin.c\
@@ -49,7 +50,6 @@ clean:
 
 fclean: clean
 		${RM} ${NAME}
-
 re:
 	fclean all
 

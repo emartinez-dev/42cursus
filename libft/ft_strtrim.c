@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 16:40:08 by franmart          #+#    #+#             */
-/*   Updated: 2022/09/28 18:25:03 by franmart         ###   ########.fr       */
+/*   Updated: 2022/09/29 19:39:13 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,23 +51,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*str;
 	size_t	f_pos;
 	size_t	l_pos;
-	size_t	i;
 
-	if (ft_strlen(set) == 0)
+	if (ft_strlen(set) == 0 || ft_strlen(s1) == 0)
 		return (ft_strdup(s1));
 	if (!s1 || !set)
 		return (0);
-	i = 0;
 	f_pos = ft_first_pos(s1, set);
 	l_pos = ft_last_pos(s1, set) + 1;
-	str = malloc(l_pos - f_pos + 1);
-	if (!str)
-		return (0);
-	while (i + f_pos < l_pos)
-	{
-		str[i] = s1[f_pos + i];
-		i++;
-	}
-	str[i] = '\0';
+	str = ft_substr(s1, f_pos, l_pos - f_pos);
 	return (str);
 }
