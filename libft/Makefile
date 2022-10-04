@@ -14,6 +14,7 @@ SRC = ft_bzero.c\
 	   ft_isdigit.c\
 	   ft_isprint.c\
 	   ft_itoa.c\
+	   ft_putchar_fd.c\
 	   ft_memmove.c\
 	   ft_memcpy.c\
 	   ft_memchr.c\
