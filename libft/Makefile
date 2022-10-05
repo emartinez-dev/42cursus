@@ -1,11 +1,23 @@
-LIB = ar -rcs
-RM = rm -rf
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/10/05 15:15:27 by franmart          #+#    #+#              #
+#    Updated: 2022/10/05 16:57:31 by franmart         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME = libft.a
 
 CC = gcc
 FLAGS = -Wall -Wextra -Werror
+LIB = ar -rcs
+RM = rm -rf
 
-NAME = libft.a
-SRC = ft_bzero.c\
+SRC =  ft_bzero.c\
 	   ft_isalnum.c\
 	   ft_atoi.c\
 	   ft_calloc.c\
@@ -42,26 +54,27 @@ SRC = ft_bzero.c\
 
 OBJ = ${SRC:.c=.o}
 
-INCLUDE = libft.h
+BONUS = ft_lstnew_bonus.c 
+
+BONUS_OBJ = ${BONUS:.c=.o}
+
+${NAME}: ${OBJ}
+	${LIB} $@ $^
+
+%.o: %.c
+	${CC} ${FLAGS} -c $^ -o $@
 
 all: ${NAME}
 
-${NAME}:	${OBJ}
-	${LIB} -o $@ $^
-
-.c.o: ${INCLUDE}
-	${CC} ${FLAGS} -c $< -o ${<:.c=.o}
-
 clean:
-		${RM} ${OBJ}
+		${RM} ${OBJ} ${BONUS_OBJ}
 
 fclean: clean
 		${RM} ${NAME}
-re:
-	fclean all
 
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJ)
+re:	fclean all
 
-.PHONY:	all clean fclean re so
+bonus: ${OBJ} ${BONUS_OBJ}
+		${LIB} ${NAME} ${OBJ} ${BONUS_OBJ}
+
+.PHONY:	all clean fclean re bonus
