@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 16:21:10 by franmart          #+#    #+#             */
-/*   Updated: 2022/10/05 16:56:11 by franmart         ###   ########.fr       */
+/*   Updated: 2022/10/05 17:01:33 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,7 @@ typedef struct s_list
 }	t_list;
 
 t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+
 
 #endif

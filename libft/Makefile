@@ -6,7 +6,7 @@
 #    By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/05 15:15:27 by franmart          #+#    #+#              #
-#    Updated: 2022/10/05 16:57:31 by franmart         ###   ########.fr        #
+#    Updated: 2022/10/05 17:01:19 by franmart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,8 @@ SRC =  ft_bzero.c\
 
 OBJ = ${SRC:.c=.o}
 
-BONUS = ft_lstnew_bonus.c 
+BONUS = ft_lstnew_bonus.c\
+	    ft_lstadd_front_bonus.c	
 
 BONUS_OBJ = ${BONUS:.c=.o}
 
