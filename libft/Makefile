@@ -6,7 +6,7 @@
 #    By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/05 15:15:27 by franmart          #+#    #+#              #
-#    Updated: 2022/10/05 18:46:48 by franmart         ###   ########.fr        #
+#    Updated: 2022/10/05 18:51:19 by franmart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,7 +61,8 @@ BONUS = ft_lstnew_bonus.c\
 		ft_lstadd_back_bonus.c\
 		ft_lstdelone_bonus.c\
 		ft_lstclear_bonus.c\
-		ft_lstiter_bonus.c
+		ft_lstiter_bonus.c\
+		ft_lstmap_bonus.c
 
 BONUS_OBJ = ${BONUS:.c=.o}
 
