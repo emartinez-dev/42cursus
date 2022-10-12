@@ -6,7 +6,7 @@
 #    By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/11 16:21:03 by franmart          #+#    #+#              #
-#    Updated: 2022/10/11 18:53:57 by franmart         ###   ########.fr        #
+#    Updated: 2022/10/12 18:31:38 by franmart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,15 @@ RM = rm -rf
 LIBFT_NAME = libft.a
 LIBFT_DIR = ./libft
 
-SRC = ft_printf.c 
+SRC = ft_printf.c \
+	 ft_parse_char.c \
+	 ft_parse_str.c \
+	 ft_parse_ptr.c \
+	 ft_parse_float.c \
+	 ft_parse_int.c \
+	 ft_parse_u_int.c \
+	 ft_parse_hex.c
+
 
 OBJ = $(SRC:.c=.o)
 

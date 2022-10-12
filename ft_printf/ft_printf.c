@@ -6,12 +6,13 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 16:30:50 by franmart          #+#    #+#             */
-/*   Updated: 2022/10/12 10:09:59 by franmart         ###   ########.fr       */
+/*   Updated: 2022/10/12 21:58:13 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdio.h>
+#include <limits.h>
 
 int	ft_check_arg(char c, va_list args)
 {
@@ -19,21 +20,21 @@ int	ft_check_arg(char c, va_list args)
 	
 	len = 0;
 	if (c == 'c')
-		len += ft_parse_char(va_arg(args, char));
+		len += ft_parse_char(va_arg(args, int));
 	if (c == 's')
 		len += ft_parse_str(va_arg(args, char *));
-	if (c == 'p')
-		len += ft_parse_args(va_arg(args, void *));
-	if (c == 'd')
-		len += ft_parse_float(va_arg(args, float));
-	if (c == 'i')
+	if (c == 'i' || c == 'd' || c == 'u')
 		len += ft_parse_int(va_arg(args, int));
-	if (c == 'u')
-		len += ft_parse_u_int(va_arg(args, unsigned int));
 	if (c == 'x' || c == 'X')
-		len += ft_parse_hex(va_arg(args, int), c);
-	if (c == '%' && len++)
-		len += ft_parse_perc();
+		len += ft_parse_hex(va_arg(args, unsigned int), c);
+/*
+	if (c == 'p')
+		len += ft_parse_ptr(va_arg(args, void *));
+*/
+	//if (c == 'u')
+	//	len += ft_parse_u_int(va_arg(args, unsigned int));
+	if (c == '%')
+		len += ft_parse_char('%');
 	return (len);
 }
 
@@ -50,13 +51,15 @@ int	ft_printf(char const *str, ...)
 	{
 		if (str[i] == '%')
 		{
-			len++;
-			len += ft_check_arg(str[i + 1], args);
+			len += ft_check_arg(str[++i], args);
+			i++;
 		}
 		else
+		{
 			write(1, &str[i], 1);
-		len++;
-		i++;
+			len++;
+			i++;
+		}
 	}
 	va_end(args);
 	return (len);
@@ -64,9 +67,11 @@ int	ft_printf(char const *str, ...)
 
 int	main(void)
 {
+	int	j;
 	int	i;
 	
-	i = ft_printf("%c", 'a');
-	printf("%d", i);
+	j = ft_printf("%u\n", -214748364);
+	i = printf("%u\n", -214748364);
+	printf("Mia: %d\nBuena:%d", j, i);
 	return (0);
 }
