@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 16:30:50 by franmart          #+#    #+#             */
-/*   Updated: 2022/10/12 21:58:13 by franmart         ###   ########.fr       */
+/*   Updated: 2022/10/13 20:54:50 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,8 @@ int	ft_check_arg(char c, va_list args)
 		len += ft_parse_int(va_arg(args, int));
 	if (c == 'x' || c == 'X')
 		len += ft_parse_hex(va_arg(args, unsigned int), c);
-/*
 	if (c == 'p')
-		len += ft_parse_ptr(va_arg(args, void *));
-*/
+		len += ft_parse_ptr(va_arg(args, unsigned long long));
 	//if (c == 'u')
 	//	len += ft_parse_u_int(va_arg(args, unsigned int));
 	if (c == '%')
@@ -65,13 +63,17 @@ int	ft_printf(char const *str, ...)
 	return (len);
 }
 
+/*
 int	main(void)
 {
 	int	j;
 	int	i;
-	
-	j = ft_printf("%u\n", -214748364);
-	i = printf("%u\n", -214748364);
-	printf("Mia: %d\nBuena:%d", j, i);
+
+	i = 0;	
+	j = ft_printf(" %p %p ", ULONG_MAX, -ULONG_MAX);
+	//i = printf(" %p %p ", LONG_MIN, LONG_MAX);
+	i = 1;
+	printf("\nMia: %d\nBuena:%d", j, i);
 	return (0);
 }
+*/

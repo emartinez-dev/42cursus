@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 18:35:59 by franmart          #+#    #+#             */
-/*   Updated: 2022/10/12 21:52:53 by franmart         ###   ########.fr       */
+/*   Updated: 2022/10/13 20:36:59 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,18 @@ void	ft_putnbr_hex(unsigned int n, int fd, char upper)
 	ft_putchar_fd(c, fd);
 }
 
+int	ft_hex_len(int hex)
+{
+	int		len;
+
+	len = 1;
+	while (hex /= 16)
+		len++;
+	return (len);
+}
+
 int	ft_parse_hex(int hex, char upper)
 {
-	int	len;
-	int	hex_cpy;
-
-	hex_cpy = ft_atoi(ft_itoa(hex));
-	len = 1;
-	while (hex_cpy /= 16)
-		len++;
 	ft_putnbr_hex(hex, 1, upper);
-	return (len);
+	return (ft_hex_len(hex));
 }

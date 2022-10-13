@@ -6,7 +6,7 @@
 #    By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/11 16:21:03 by franmart          #+#    #+#              #
-#    Updated: 2022/10/12 18:31:38 by franmart         ###   ########.fr        #
+#    Updated: 2022/10/13 20:10:46 by franmart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,6 @@ SRC = ft_printf.c \
 	 ft_parse_char.c \
 	 ft_parse_str.c \
 	 ft_parse_ptr.c \
-	 ft_parse_float.c \
 	 ft_parse_int.c \
 	 ft_parse_u_int.c \
 	 ft_parse_hex.c
@@ -34,6 +33,7 @@ OBJ = $(SRC:.c=.o)
 
 ${NAME}: ${OBJ}
 	$(MAKE) bonus -C $(LIBFT_DIR)
+	cp libft/libft.a $(NAME)
 	${LIB} $@ $^
 
 %.o: %.c
