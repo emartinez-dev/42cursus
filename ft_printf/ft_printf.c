@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 16:30:50 by franmart          #+#    #+#             */
-/*   Updated: 2022/10/16 12:17:37 by franmart         ###   ########.fr       */
+/*   Updated: 2022/10/16 13:21:35 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@ int	ft_check_arg(char c, va_list args)
 		len += ft_parse_char(va_arg(args, int));
 	if (c == 's')
 		len += ft_parse_str(va_arg(args, char *));
-	if (c == 'i' || c == 'd' || c == 'u')
+	if (c == 'i' || c == 'd')
 		len += ft_parse_int(va_arg(args, int));
 	if (c == 'x' || c == 'X')
 		len += ft_parse_hex(va_arg(args, unsigned int), c);
 	if (c == 'p')
 		len += ft_parse_ptr(va_arg(args, unsigned long long));
-	//if (c == 'u')
-	//	len += ft_parse_u_int(va_arg(args, unsigned int));
+	if (c == 'u')
+		len += ft_parse_u_int(va_arg(args, unsigned int));
 	if (c == '%')
 		len += ft_parse_char('%');
 	return (len);
@@ -70,9 +70,8 @@ int	main(void)
 	int	i;
 
 	i = 0;	
-	j = ft_printf(" %p %p ", ULONG_MAX, -ULONG_MAX);
-	//i = printf(" %p %p ", LONG_MIN, LONG_MAX);
-	i = 1;
+	j = ft_printf(" %d ", 0);
+	i = printf(" %d ", 0);
 	printf("\nMia: %d\nBuena:%d", j, i);
 	return (0);
 }
