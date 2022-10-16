@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 16:30:50 by franmart          #+#    #+#             */
-/*   Updated: 2022/10/13 20:54:50 by franmart         ###   ########.fr       */
+/*   Updated: 2022/10/16 12:17:37 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 int	ft_check_arg(char c, va_list args)
 {
 	int	len;
-	
+
 	len = 0;
 	if (c == 'c')
 		len += ft_parse_char(va_arg(args, int));

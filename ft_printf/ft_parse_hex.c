@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 18:35:59 by franmart          #+#    #+#             */
-/*   Updated: 2022/10/13 20:36:59 by franmart         ###   ########.fr       */
+/*   Updated: 2022/10/16 12:18:26 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,12 @@ int	ft_hex_len(int hex)
 {
 	int		len;
 
-	len = 1;
-	while (hex /= 16)
+	len = 0;
+	while (hex / 16)
+	{
+		hex /= 16;
 		len++;
+	}
 	return (len);
 }
 
