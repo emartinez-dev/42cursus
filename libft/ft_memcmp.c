@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 22:32:45 by franmart          #+#    #+#             */
-/*   Updated: 2022/09/26 23:52:58 by franmart         ###   ########.fr       */
+/*   Updated: 2022/10/19 19:32:15 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	str2 = (unsigned char *)s2;
 	while (i < n && n > 0)
 	{
-		if (str1[i] > str2[i])
-			return (1);
-		if (str1[i] < str2[i])
-			return (-1);
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
 		i++;
 	}
 	return (0);
