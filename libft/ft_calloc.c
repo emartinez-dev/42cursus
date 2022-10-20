@@ -6,12 +6,11 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 20:37:13 by franmart          #+#    #+#             */
-/*   Updated: 2022/09/28 16:03:16 by franmart         ###   ########.fr       */
+/*   Updated: 2022/10/20 20:25:40 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <limits.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
