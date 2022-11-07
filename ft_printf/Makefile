@@ -6,7 +6,7 @@
 #    By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/11 16:21:03 by franmart          #+#    #+#              #
-#    Updated: 2022/11/07 18:14:54 by franmart         ###   ########.fr        #
+#    Updated: 2022/11/07 19:16:10 by franmart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,10 +18,9 @@ LIB = ar -rcs
 RM = rm -rf
 
 SRC = ft_printf.c \
-	 ft_parse_char.c \
-	 ft_parse_str.c \
-	 ft_auxiliary.c \
-	 ft_parse_nbr.c 
+	 ft_parse_chars.c \
+	 ft_parse_nums.c \
+	 ft_auxiliary.c
 
 OBJ = $(SRC:.c=.o)
 
