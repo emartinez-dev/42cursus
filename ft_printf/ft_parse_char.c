@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 16:58:33 by franmart          #+#    #+#             */
-/*   Updated: 2022/10/12 17:22:33 by franmart         ###   ########.fr       */
+/*   Updated: 2022/11/07 18:19:55 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int	ft_parse_char(char c)
 {
-	ft_putchar_fd(c, 1);
+	ft_putchar(c);
 	return (1);
 }
