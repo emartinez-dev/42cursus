@@ -1,0 +1,15 @@
+[submodule "libft"]
+	path = libft
+	url = git@github.com:emartinez-dev/libft.git
+[submodule "get_next_line"]
+	path = get_next_line
+	url = git@github.com:emartinez-dev/get_next_line.git
+[submodule "ft_printf"]
+	path = ft_printf
+	url = git@github.com:emartinez-dev/ft_printf.git
+[submodule "pipex"]
+	path = pipex
+	url = git@github.com:emartinez-dev/pipex.git
+[submodule "FdF"]
+	path = FdF
+	url = git@github.com:emartinez-dev/FdF.git
