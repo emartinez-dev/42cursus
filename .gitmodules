@@ -13,3 +13,6 @@
 [submodule "FdF"]
 	path = FdF
 	url = git@github.com:emartinez-dev/FdF.git
+[submodule "push-swap"]
+	path = push-swap
+	url = git@github.com:emartinez-dev/push-swap.git
