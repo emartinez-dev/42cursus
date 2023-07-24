@@ -22,3 +22,9 @@
 [submodule "Minishell"]
 	path = Minishell
 	url = git@github.com:Juan-aga/Minishell.git
+[submodule "CPP_Modules"]
+	path = CPP_Modules
+	url = git@github.com:emartinez-dev/CPP_Modules.git
+[submodule "NetPractice"]
+	path = NetPractice
+	url = git@github.com:emartinez-dev/NetPractice.git
